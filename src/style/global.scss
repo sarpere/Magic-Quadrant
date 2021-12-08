@@ -1,0 +1,21 @@
+@import "variables.scss";
+
+body  {
+  font-family: sans-serif;
+}
+
+// Component styles
+
+button {
+  background-color: $LIGHT_GREY;
+  &:hover {
+    background-color: $DARK_BLUE;
+  }
+}
+
+table {
+  th {
+    background-color: $LIGHT_BLUE;
+    color: $WHITE;
+  }
+}
