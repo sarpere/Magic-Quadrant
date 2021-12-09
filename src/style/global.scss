@@ -1,21 +1,46 @@
 @import "variables.scss";
 
-body  {
-  font-family: sans-serif;
+* {
+  font-family: Sans-Serif;
+  font-size: 14px;
 }
-
+.App {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+@mixin addRadius {
+  border-radius: 5px;
+}
 // Component styles
 
 button {
   background-color: $LIGHT_GREY;
+  border: 1px solid $LIGHT_BLUE;
+  padding: 4px 20px;
+  cursor: pointer;
+  @include addRadius;
   &:hover {
     background-color: $DARK_BLUE;
+    color:white;
   }
 }
 
 table {
+  width: 100%;
+  white-space:nowrap;
   th {
     background-color: $LIGHT_BLUE;
     color: $WHITE;
+    @include addRadius;
+  }
+}
+input {
+  padding: 5px;
+  @include addRadius;
+  border: 1px solid $LIGHT_BLUE;
+  width: calc(100% - 10px);
+  &:focus-visible{
+    outline-color: $DARK_BLUE;
   }
 }

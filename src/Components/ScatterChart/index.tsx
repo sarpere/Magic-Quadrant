@@ -13,8 +13,8 @@ function ScatterChart({ items, height, width }: Props): ReactElement {
   return (
     <svg className='scatter-chart' width={width} height={height}>
       <Grid height={height} width={width} />
-      {items.map((item, i) =>
-        <Item key={i} x={item.x} y={height - item.y} label={item.label} />
+      {items.map((item) =>
+        <Item key={item.id} id={item.id} x={item.x} y={height - item.y} label={item.label} />
       )}
     </svg>
   )

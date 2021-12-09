@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 import ItemTypes from '../Types/Item'
 import './style.scss';
-function Item({ x, y, label }: ItemTypes.Item): ReactElement {
+function Item({ x, y, label, id }: ItemTypes.Item): ReactElement {
   const textX = x + 10, textY = y + 10;
   return (
     <g>
