@@ -8,6 +8,8 @@
   display: flex;
   justify-content: center;
   column-gap: 20px;
+  align-items: center;
+  height: 100vh;
 }
 @mixin addRadius {
   border-radius: 5px;

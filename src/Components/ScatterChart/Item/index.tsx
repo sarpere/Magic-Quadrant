@@ -23,10 +23,10 @@ function Item({ x, y, label, id, svgRef, onPointDrag }: ItemTypes.ItemProps): Re
   )
   useEffect(() => {
     circleRef.current?.addEventListener('mousedown', mouseDown, true);
-    circleRef.current?.addEventListener('mouseup', mouseUp, true);
+    window.addEventListener('mouseup', mouseUp, true);
     return () => {
       circleRef.current?.removeEventListener('mousedown', mouseDown, true);
-      circleRef.current?.removeEventListener('mouseup', mouseUp, true);
+      window.removeEventListener('mouseup', mouseUp, true);
     };
   }, [mouseDown, mouseUp])
   useEffect(() => {
