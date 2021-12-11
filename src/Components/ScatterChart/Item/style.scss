@@ -1,7 +1,10 @@
-@import '../../../style/variables.scss';
-.scatter-chart__point{
+@import "../../../style/variables.scss";
+.scatter-chart__point {
   fill: $DARK_BLUE;
-
+  cursor: grab;
+  &.dragging {
+    cursor: grabbing;
+  }
 }
 text {
   font-size: 13px;

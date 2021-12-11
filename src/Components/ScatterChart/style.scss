@@ -1,4 +1,8 @@
-@import '../../style/variables.scss';
-.scatter-chart{
-  border: 2px solid $DARK_GREY;
+@import "../../style/variables.scss";
+.scatter-container {
+  position: relative;
+  .scatter-chart {
+    border: 2px solid $DARK_GREY;
+    user-select: none;
+  }
 }
