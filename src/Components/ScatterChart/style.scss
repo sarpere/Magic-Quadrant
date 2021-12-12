@@ -1,6 +1,7 @@
 @import "../../style/variables.scss";
 .scatter-container {
   position: relative;
+  height: min-content;
   .scatter-chart {
     border: 2px solid $DARK_GREY;
     user-select: none;
