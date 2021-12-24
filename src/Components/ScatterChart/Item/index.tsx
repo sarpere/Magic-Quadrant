@@ -2,7 +2,7 @@ import { ReactElement, useCallback, useEffect, useRef, useState } from 'react'
 import { getMouseCoordinates } from '../../../Utils/Mouse';
 import ItemTypes from '../Types/Item'
 import './style.scss';
-function Item({ x, y, label, id, svgRef, onPointDrag }: ItemTypes.ItemProps): ReactElement {
+function Item({ x, y, label, id, isActive, svgRef, onPointDrag }: ItemTypes.ItemProps): ReactElement {
 
   const [move, setmove] = useState(false)
   const circleRef = useRef<SVGCircleElement>(null);
@@ -37,7 +37,9 @@ function Item({ x, y, label, id, svgRef, onPointDrag }: ItemTypes.ItemProps): Re
   }, [move, mouseMove, svgRef])
   return (
     <g>
-      <circle ref={circleRef} className={`${move ? "dragging" : ""} scatter-chart__point`} cx={x} cy={y} r={6}>
+      <circle ref={circleRef}
+        className={`${move ? "dragging" : ""} ${isActive ? "active" : ''} scatter-chart__point`}
+        cx={x} cy={y} r={6}>
       </circle>
       <text x={textX} y={textY}>{label}</text>
     </g>

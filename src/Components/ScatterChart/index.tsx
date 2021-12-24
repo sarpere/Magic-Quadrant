@@ -24,7 +24,7 @@ function ScatterChart({ items, height, width, onPointDrag }: Props): ReactElemen
       <svg ref={svgRef} className='scatter-chart' width={width} height={height}>
         <Grid height={height} width={width} />
         {items.map((item) =>
-          <Item key={item.id} onPointDrag={onPointUpdate} svgRef={svgRef} id={item.id} x={getX(item.x)} y={getY(item.y)} label={item.label} />
+          <Item key={item.id} onPointDrag={onPointUpdate} svgRef={svgRef} id={item.id} isActive={item.isActive} x={getX(item.x)} y={getY(item.y)} label={item.label} />
         )}
       </svg>
       <Axis />

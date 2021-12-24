@@ -10,6 +10,7 @@ export interface Item {
   label: label;
   x: x;
   y: y;
+  isActive?: boolean;
 }
 export type onPointDrag = (coordinates: {x: number, y: number}, item) => void;
 export interface ItemActions {

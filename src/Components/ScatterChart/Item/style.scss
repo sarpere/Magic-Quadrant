@@ -2,8 +2,12 @@
 .scatter-chart__point {
   fill: $DARK_BLUE;
   cursor: grab;
+  opacity: 0.5;
   &.dragging {
     cursor: grabbing;
+  }
+  &.active {
+    opacity: 1;
   }
 }
 text {

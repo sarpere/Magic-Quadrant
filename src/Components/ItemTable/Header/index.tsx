@@ -7,11 +7,6 @@ interface Props {
 function Header({ columns }: Props): ReactElement {
   return (
     <>
-      {/* <colgroup>
-        {
-          columns.map(column => <col style={{ width: column.width || 'auto' }} />)
-        }
-      </colgroup> */}
       <thead>
         <tr>
           {
