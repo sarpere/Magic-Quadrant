@@ -6,7 +6,7 @@ import ItemTypes from './Components/ScatterChart/Types/Item'
 import './style/global.scss'
 function App() {
   const { items, itemOnUpdate, remove, add } = useContext(ItemContext);
-  const renderOpacityUpdate: HeaderTypes.render<ItemTypes.Item> = (value: string | number, row, key: string) => <input type={'checkbox'} value={value} onChange={(e) => itemOnUpdate(row.id, { ...row, [key]: e.currentTarget.checked })} />;
+  const renderOpacityUpdate: HeaderTypes.render<ItemTypes.Item> = (value: boolean, row, key: string) => <input type={'checkbox'} checked={value} onChange={(e) => itemOnUpdate(row.id, { ...row, [key]: e.currentTarget.checked })} />;
   const renderInput: HeaderTypes.render<ItemTypes.Item> = (value: string | number, row, key: string) => <input value={value} onChange={(e) => itemOnUpdate(row.id, { ...row, [key]: e.currentTarget.value })} />;
   const renderNumberInput: HeaderTypes.render<ItemTypes.Item> = (value: string | number, row, key: string) => <input type={"number"} step='0.01' value={value}
     onChange={(e) => itemOnUpdate(row.id, { ...row, [key]: !e.currentTarget.value ? 0 : Math.min(parseFloat(parseFloat(e.currentTarget.value).toFixed(2)), 100) })} />;

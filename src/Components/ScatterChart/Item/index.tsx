@@ -17,7 +17,7 @@ function Item({ x, y, label, id, isActive, svgRef, onPointDrag }: ItemTypes.Item
     (e: MouseEvent) => {
       if (!move) { return false; }
       const coordinates = getMouseCoordinates(e, svgRef?.current);
-      onPointDrag(coordinates, { x, y, label, id })
+      onPointDrag(coordinates, { x, y, label, id, isActive })
     },
     [move, x, y, label, id, onPointDrag, svgRef]
   )

@@ -4,7 +4,7 @@ export interface ColumnBase {
   dataKey: string;
 }
 export type render<T> = (
-  value: string | number,
+  value: any,
   row: T,
   key: string
 ) => ReactElement | Element | JSX.Element;
